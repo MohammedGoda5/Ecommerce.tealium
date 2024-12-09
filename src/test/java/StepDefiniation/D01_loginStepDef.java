@@ -9,8 +9,8 @@ import pages.P01_login;
 public class D01_loginStepDef {
     P01_login login = new P01_login();
 
-    @When("user opens login page")
-    public void login_page() {
+    @When("user open login page")
+    public void openLoginPage() {
         login.clickOnAccountInHeader();
         login.openLoginPage();
     }
@@ -38,7 +38,7 @@ public class D01_loginStepDef {
 
 
     @When("user opens login page")
-    public void openLoginPage() {
+    public void open_login_page() {
         login.clickOnAccountInHeader();
         login.openLoginPage();
     }

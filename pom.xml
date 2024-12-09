@@ -10,32 +10,20 @@
 
     <properties>
         <!-- Make sure you point to the latest release version: https://github.com/ShaftHQ/SHAFT_ENGINE/releases -->
-        <shaft_engine.version>8.2.20240624</shaft_engine.version>
+        <shaft_engine.version>8.4.20241024</shaft_engine.version>
         <aspectjweaver.version>1.9.22.1</aspectjweaver.version>
         <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
         <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
-        <surefire-testng.version>3.3.0</surefire-testng.version>
-        <maven-surefire-plugin.version>3.3.0</maven-surefire-plugin.version>
-        <junit-jupiter-engine.version>5.10.3</junit-jupiter-engine.version>
+        <surefire-testng.version>3.5.2</surefire-testng.version>
+        <maven-surefire-plugin.version>3.5.2</maven-surefire-plugin.version>
+        <junit-jupiter-engine.version>5.11.3</junit-jupiter-engine.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>io.github.shafthq</groupId>
             <artifactId>SHAFT_ENGINE</artifactId>
-            <version>8.2.20240411</version>
+            <version>${shaft_engine.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.github.javafaker</groupId>
-            <artifactId>javafaker</artifactId>
-            <version>1.0.2</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java</artifactId>
-            <version>7.20.1</version>
-        </dependency>
-
     </dependencies>
     <build>
         <plugins>
@@ -44,11 +32,10 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven-compiler-plugin.version}</version>
                 <configuration>
-                    <source>22</source>
-                    <target>22</target>
+                    <source>21</source>
+                    <target>21</target>
                     <encoding>UTF-8</encoding>
                     <meminitial>4096m</meminitial>
-                    <compilerArgs>--enable-preview</compilerArgs>
                 </configuration>
             </plugin>
             <plugin>
@@ -59,19 +46,6 @@
                     <encoding>UTF-8</encoding>
                     <outputDirectory>target/classes</outputDirectory>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>io.qameta.allure</groupId>
-                <artifactId>allure-maven</artifactId>
-                <version>2.10.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>report</goal>
-                            <goal>serve</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
@@ -149,9 +123,8 @@
                             <dependency>
                                 <groupId>org.junit.jupiter</groupId>
                                 <artifactId>junit-jupiter-engine</artifactId>
-                                <version>5.10.2</version>
+                                <version>${junit-jupiter-engine.version}</version>
                             </dependency>
-
                         </dependencies>
                         <configuration>
                             <systemPropertyVariables>
