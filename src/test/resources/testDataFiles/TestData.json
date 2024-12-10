@@ -1,0 +1,20 @@
+{
+  "validFirstName": "mohamed",
+  "validLastName": "nabil",
+  "register-1": "10078238b1af@drmail.in",
+  "register-2": "d5db074c9a1b@drmail.in",
+  "register-3": "00a743be2553@drmail.in",
+  "validPassword": "12345678",
+  "invalidPassword": "123456",
+  "loginMail": "mohammed.nabil4004@gmail.com",
+  "loginPass":"123456Mm",
+
+
+  "invalidMail": "mohammed@gmail.com",
+
+
+  "successfulLoginMsg": "Welcome, Mohamed Goda! ",
+  "failLoginMsg": "Invalid login or password.",
+  "successfulRegisterMsg": "Thank you for registering with Tealium Ecommerce.",
+  "failRegisterMsg": ""
+}

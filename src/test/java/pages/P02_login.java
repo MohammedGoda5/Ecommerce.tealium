@@ -4,9 +4,9 @@ import StepDefiniation.Hooks;
 import org.openqa.selenium.By;
 
 
-public class P01_login {
+public class P02_login {
     public void clickOnAccountInHeader() {
-        Hooks.driver.element().click(By.xpath("//a[@class='skip-link skip-account']"));
+        Hooks.driver.element().click(By.xpath("//*[@id=\'header\']/div/div[2]/div/a"));
     }
 
     public void openLoginPage() {
@@ -22,7 +22,7 @@ public class P01_login {
     }
 
     public void RememberMe() {
-        Hooks.driver.element().click(By.id("remember_meamMt29NQsm"));
+        Hooks.driver.element().click(By.id("remember_meRAKnadBmqB"));
     }
 
     public void clickOnLoginButton() {
