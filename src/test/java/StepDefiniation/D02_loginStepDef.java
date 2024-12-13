@@ -8,7 +8,7 @@ import pages.P02_login;
 
 
 public class D02_loginStepDef {
-    P02_login login = new P02_login();
+    P02_login login = new P02_login(Hooks.driver);
     SHAFT.TestData.JSON testData=new SHAFT.TestData.JSON("TestData.json");
     @When("user open login page")
     public void openLoginPage() {

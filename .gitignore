@@ -41,3 +41,4 @@ allure-results
 target
 generate_allure_report.bat
 allure-report
+performanceReport
