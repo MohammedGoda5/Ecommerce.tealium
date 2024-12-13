@@ -8,8 +8,9 @@ import pages.P01_Register;
 
 
 public class D01_RegisterStepDef {
-    P01_Register register = new P01_Register();
-    SHAFT.TestData.JSON testData=new SHAFT.TestData.JSON("TestData.json");
+    P01_Register register = new P01_Register(Hooks.driver);
+    SHAFT.TestData.JSON testData = new SHAFT.TestData.JSON("TestData.json");
+
     @When("user open register page")
     public void openLoginPage() {
         register.clickOnAccountInHeader();

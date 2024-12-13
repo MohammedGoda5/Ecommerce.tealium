@@ -14,11 +14,11 @@ public class Hooks {
 
         driver.browser().navigateToURL("https://ecommerce.tealiumdemo.com/");
     }
-
-    @After
-    public void close() {
-        if (driver != null) {
-            driver.quit();
-        }
-    }
+//
+//    @After
+//    public void close() {
+//        if (driver != null) {
+//            driver.quit();
+//        }
+//    }
 }
