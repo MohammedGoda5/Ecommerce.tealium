@@ -53,12 +53,11 @@ public class P02_login {
 
     //assertion
     public void login_success(String welcomeMessage) {
-        Hooks.driver.element().getText(welcomeMessageLoc).equals(welcomeMessage);
+        Hooks.driver.element().assertThat(welcomeMessageLoc).text().contains(welcomeMessage);
     }
 
     public void login_failed(String errorMessage) {
-        Hooks.driver.element().getText(errorMessageLoc).equals(errorMessage);
-    }
+        Hooks.driver.element().assertThat(errorMessageLoc).text().contains(errorMessage);    }
 
 
 }
