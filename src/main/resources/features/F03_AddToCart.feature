@@ -8,3 +8,4 @@ Feature:F03_AddToCart | authenticated users could add item to cart
     And user view the details for selected shoes
     And user select color and size
     And add the selected shoes to cart
+    Then user get the checkout page after add the shoes to cart

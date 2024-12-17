@@ -2,6 +2,7 @@ package StepDefiniation;
 
 import com.shaft.driver.SHAFT;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.P02_login;
 import pages.P03_AddToCart;
@@ -52,4 +53,9 @@ public class D03_AddToCart {
     public void addShoesToCart() {
         addToCart.addShoesToCart();
     }
+
+@Then("user get the checkout page after add the shoes to cart")
+public void getCheckoutPage(){
+    addToCart.assertCheckoutPageAppears(testData.getTestData("checkOutAppears"));
+}
 }

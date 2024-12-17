@@ -19,7 +19,7 @@ public class P03_AddToCart {
     By firstShoesLoc = By.xpath("//*[@id='top']/body/div[2]/div/div[2]/div/div[2]/div[2]/div[3]/ul/li[1]/div/div[2]/a");
     By colorLoc = By.id("option17");
     By sizeLoc = By.id("option99");
-
+    By checkoutPageLoc=By.xpath("//li[@class='success-msg']");
     public P03_AddToCart(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
     }
@@ -56,5 +56,8 @@ public class P03_AddToCart {
         Hooks.driver.element().click(By.xpath("//button[@onclick='productAddToCartForm.submit(this)']"));
     }
 
+public void assertCheckoutPageAppears(String assertCheckoutPage){
+        Hooks.driver.element().assertThat(checkoutPageLoc).text().contains(assertCheckoutPage);
+}
 
 }

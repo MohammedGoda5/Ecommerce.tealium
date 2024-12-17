@@ -1,9 +1,9 @@
 {
   "validFirstName": "mohamed",
   "validLastName": "nabil",
-  "register-1": "10078238b1af@drmail.in",
-  "register-2": "d5db074c9a1b@drmail.in",
-  "register-3": "00a743be2553@drmail.in",
+  "register_1": "c40efa181b@emailvb.pro",
+  "register_2": "2f304c81b1@emailvb.pro",
+  "register_3": "0394c7aa87@emailvb.pro",
   "validPassword": "12345678",
   "invalidPassword": "123456",
   "loginMail": "mohammed.nabil4004@gmail.com",
@@ -16,5 +16,6 @@
   "successfulLoginMsg": "Welcome, Mohamed Goda! ",
   "failLoginMsg": "Invalid login or password.",
   "successfulRegisterMsg": "Thank you for registering with Tealium Ecommerce.",
-  "failRegisterMsg": ""
+  "alreadyRegisterMsg": "There is already an account with this email address. If you are sure that it is your email address, click here to get your password and access your account."
+  ,"checkOutAppears": "added to your shopping cart."
 }
