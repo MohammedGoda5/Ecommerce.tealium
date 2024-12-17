@@ -6,55 +6,40 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.P01_Register;
 
-
 public class D01_RegisterStepDef {
     P01_Register register = new P01_Register(Hooks.driver);
     SHAFT.TestData.JSON testData = new SHAFT.TestData.JSON("TestData.json");
 
-    @When("user open register page")
-    public void openLoginPage() {
+    @When("user opens register page")
+    public void openRegisterPage() {
         register.clickOnAccountInHeader();
         register.openRegisterPage();
     }
 
-    @And("user add valid first name")
-    public void addFirstName() {
-        register.addFirstName(testData.getTestData("validFirstName"));
-
+    @And("user fills registration form with {string}, {string}, {string}, {string}")
+    public void fillRegistrationForm(String firstName, String lastName, String email, String password) {
+        register.addFirstName(testData.getTestData(firstName));
+        register.addLastName(testData.getTestData(lastName));
+        register.addEmail(testData.getTestData(email));
+        register.addPassword(testData.getTestData(password));
+        register.confirmPassword(testData.getTestData(password));
     }
 
-    @And("user add valid last name")
-    public void addLastName() {
-        register.addLastName(testData.getTestData("validLastName"));
-    }
 
-    @And("user add valid email")
-    public void addValidEmailAddress() {
-        register.addEmail(testData.getTestData("register-2"));
-    }
 
-    @And("user add password")
-    public void addPassword() {
-        register.addPassword(testData.getTestData("validPassword"));
-    }
-
-    @And("user confirm the password")
-    public void confirmTheAddedPass() {
-        register.confirmPassword(testData.getTestData("validPassword"));
-    }
 
     @And("user clicks on register button")
-    public void register_button() {
+    public void clickRegisterButton() {
         register.clickOnRegisterButton();
-
     }
 
-    @Then("user register to the system successfully")
-    public void successfulRegister() {
+    @Then("system registers the user successfully")
+    public void successfulRegistration() {
         register.successRegister(testData.getTestData("successfulRegisterMsg"));
     }
 
-
+    @Then("system shows an error message for already registered email")
+    public void registrationFailsDueToDuplicateEmail() {
+        register.failRegister(testData.getTestData("alreadyRegisterMsg"));
+    }
 }
-
-

@@ -1,13 +1,13 @@
 @Regression_TCs
 Feature:F01_Registration | users could register
-  Scenario: user can register using valid credentials
-    When user open register page
-    And user add valid first name
-    And user add valid last name
-    And user add valid email
-    And user add password
-    And user confirm the password
+  Scenario: Register with valid credentials
+    When user opens register page
+    And user fills registration form with "validFirstName", "validLastName", "register_2", "validPassword"
     And user clicks on register button
-    Then user register to the system successfully
+    Then system registers the user successfully
 
-
+  Scenario: Register with already registered email
+    When user opens register page
+    And user fills registration form with "validFirstName", "validLastName", "loginMail", "loginPass"
+    And user clicks on register button
+    Then system shows an error message for already registered email

@@ -24,7 +24,7 @@ public class P01_Register {
     By confirmPassword = By.id("confirmation");
     By registerButton = By.xpath("//*[@id='form-validate']/div[2]/button");
     By welcome_message = By.xpath("//li[@class='success-msg']");
-
+    By alreadyRegisterEmail=By.xpath("//li[@class='error-msg']");
     public void clickOnAccountInHeader() {
         Hooks.driver.element().click(account);
     }
@@ -60,8 +60,10 @@ public class P01_Register {
 
     //assertion
     public void successRegister(String welcomeMessage) {
-        Hooks.driver.element().getText(welcome_message).equals(welcomeMessage);
-    }
+        Hooks.driver.element().assertThat(welcome_message).text().contains(welcomeMessage);    }
 
+public void failRegister(String failRegisterMsg){
+    Hooks.driver.element().assertThat(alreadyRegisterEmail).text().contains(failRegisterMsg);
+}
 
 }
