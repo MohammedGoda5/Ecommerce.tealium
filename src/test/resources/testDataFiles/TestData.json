@@ -13,7 +13,7 @@
   "invalidMail": "mohammed@gmail.com",
 
 
-  "successfulLoginMsg": "Welcome, Mohamed Goda! ",
+  "successfulLoginMsg": "Hello, Mohamed Goda!",
   "failLoginMsg": "Invalid login or password.",
   "successfulRegisterMsg": "Thank you for registering with Tealium Ecommerce.",
   "alreadyRegisterMsg": "There is already an account with this email address. If you are sure that it is your email address, click here to get your password and access your account."

@@ -1,6 +1,6 @@
 package pages;
 
-import StepDefiniation.Hooks;
+
 import com.shaft.driver.SHAFT;
 import org.openqa.selenium.By;
 
@@ -26,38 +26,38 @@ public class P02_login {
 
     //Actions
     public void clickOnAccountInHeader() {
-        Hooks.driver.element().click(account);
+        driver.element().click(account);
     }
 
     public void openLoginPage() {
-        Hooks.driver.element().click(loginPage);
+        driver.element().click(loginPage);
     }
 
     public void addEmail(String email) {
-        Hooks.driver.element().type(emailField, email);
+        driver.element().type(emailField, email);
     }
 
     public void addPassword(String password) {
-        Hooks.driver.element().type(passwordField, password);
+        driver.element().type(passwordField, password);
     }
 
     public void RememberMe() {
-        Hooks.driver.element().click(rememberMe);
+        driver.element().click(rememberMe);
     }
 
     public P03_AddToCart clickOnLoginButton() {
-        Hooks.driver.element().click(loginButton);
-        return new P03_AddToCart(Hooks.driver);
+        driver.element().click(loginButton);
+        return new P03_AddToCart(driver);
     }
 
 
     //assertion
     public void login_success(String welcomeMessage) {
-        Hooks.driver.element().assertThat(welcomeMessageLoc).text().contains(welcomeMessage);
+        driver.element().assertThat(welcomeMessageLoc).text().contains(welcomeMessage);
     }
 
     public void login_failed(String errorMessage) {
-        Hooks.driver.element().assertThat(errorMessageLoc).text().contains(errorMessage);    }
+        driver.element().assertThat(errorMessageLoc).text().contains(errorMessage);    }
 
 
 }

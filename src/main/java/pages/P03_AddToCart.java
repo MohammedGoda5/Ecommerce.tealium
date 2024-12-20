@@ -1,6 +1,5 @@
 package pages;
 
-import StepDefiniation.Hooks;
 
 
 import com.shaft.driver.SHAFT;
@@ -25,39 +24,39 @@ public class P03_AddToCart {
     }
 
     public void hoverOnAccessories() {
-        Hooks.driver.element().hover(accessoriesCategory);
+        driver.element().hover(accessoriesCategory);
     }
 
     public void clickOnShoes() {
-        Hooks.driver.element().click(shoesSubcategory);
+        driver.element().click(shoesSubcategory);
     }
 
     public void clickOnFilter() {
-        Hooks.driver.element().click(filterLoc);
+        driver.element().click(filterLoc);
     }
 
     public void selectPriceOption() {
-        Hooks.driver.element().click(priceFilter);
+        driver.element().click(priceFilter);
     }
 
     public void viewDetailsFirstShoes() {
-        Hooks.driver.element().click(firstShoesLoc);
+        driver.element().click(firstShoesLoc);
     }
 
     public void selectColor() {
-        Hooks.driver.element().click(colorLoc);
+        driver.element().click(colorLoc);
     }
 
     public void selectSize() {
-        Hooks.driver.element().click(sizeLoc);
+        driver.element().click(sizeLoc);
     }
 
     public void addShoesToCart() {
-        Hooks.driver.element().click(By.xpath("//button[@onclick='productAddToCartForm.submit(this)']"));
+        driver.element().click(By.xpath("//button[@onclick='productAddToCartForm.submit(this)']"));
     }
 
 public void assertCheckoutPageAppears(String assertCheckoutPage){
-        Hooks.driver.element().assertThat(checkoutPageLoc).text().contains(assertCheckoutPage);
+        driver.element().assertThat(checkoutPageLoc).text().contains(assertCheckoutPage);
 }
 
 }
